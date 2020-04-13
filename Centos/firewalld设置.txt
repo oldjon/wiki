@@ -1,41 +1,41 @@
-1¡¢firewalldµÄ»ù±¾Ê¹ÓÃ
-Æô¶¯£º systemctl start firewalld
-¹Ø±Õ£º systemctl stop firewalld
-²é¿´×´Ì¬£º systemctl status firewalld 
-¿ª»ú½ûÓÃ  £º systemctl disable firewalld
-¿ª»úÆôÓÃ  £º systemctl enable firewalld
+1ã€firewalldçš„åŸºæœ¬ä½¿ç”¨
+å¯åŠ¨ï¼š systemctl start firewalld
+å…³é—­ï¼š systemctl stop firewalld
+æŸ¥çœ‹çŠ¶æ€ï¼š systemctl status firewalld 
+å¼€æœºç¦ç”¨  ï¼š systemctl disable firewalld
+å¼€æœºå¯ç”¨  ï¼š systemctl enable firewalld
  
  
-2.systemctlÊÇCentOS7µÄ·şÎñ¹ÜÀí¹¤¾ßÖĞÖ÷ÒªµÄ¹¤¾ß£¬ËüÈÚºÏÖ®Ç°serviceºÍchkconfigµÄ¹¦ÄÜÓÚÒ»Ìå¡£
-Æô¶¯Ò»¸ö·şÎñ£ºsystemctl start firewalld.service
-¹Ø±ÕÒ»¸ö·şÎñ£ºsystemctl stop firewalld.service
-ÖØÆôÒ»¸ö·şÎñ£ºsystemctl restart firewalld.service
-ÏÔÊ¾Ò»¸ö·şÎñµÄ×´Ì¬£ºsystemctl status firewalld.service
-ÔÚ¿ª»úÊ±ÆôÓÃÒ»¸ö·şÎñ£ºsystemctl enable firewalld.service
-ÔÚ¿ª»úÊ±½ûÓÃÒ»¸ö·şÎñ£ºsystemctl disable firewalld.service
-²é¿´·şÎñÊÇ·ñ¿ª»úÆô¶¯£ºsystemctl is-enabled firewalld.service
-²é¿´ÒÑÆô¶¯µÄ·şÎñÁĞ±í£ºsystemctl list-unit-files|grep enabled
-²é¿´Æô¶¯Ê§°ÜµÄ·şÎñÁĞ±í£ºsystemctl --failed
+2.systemctlæ˜¯CentOS7çš„æœåŠ¡ç®¡ç†å·¥å…·ä¸­ä¸»è¦çš„å·¥å…·ï¼Œå®ƒèåˆä¹‹å‰serviceå’Œchkconfigçš„åŠŸèƒ½äºä¸€ä½“ã€‚
+å¯åŠ¨ä¸€ä¸ªæœåŠ¡ï¼šsystemctl start firewalld.service
+å…³é—­ä¸€ä¸ªæœåŠ¡ï¼šsystemctl stop firewalld.service
+é‡å¯ä¸€ä¸ªæœåŠ¡ï¼šsystemctl restart firewalld.service
+æ˜¾ç¤ºä¸€ä¸ªæœåŠ¡çš„çŠ¶æ€ï¼šsystemctl status firewalld.service
+åœ¨å¼€æœºæ—¶å¯ç”¨ä¸€ä¸ªæœåŠ¡ï¼šsystemctl enable firewalld.service
+åœ¨å¼€æœºæ—¶ç¦ç”¨ä¸€ä¸ªæœåŠ¡ï¼šsystemctl disable firewalld.service
+æŸ¥çœ‹æœåŠ¡æ˜¯å¦å¼€æœºå¯åŠ¨ï¼šsystemctl is-enabled firewalld.service
+æŸ¥çœ‹å·²å¯åŠ¨çš„æœåŠ¡åˆ—è¡¨ï¼šsystemctl list-unit-files|grep enabled
+æŸ¥çœ‹å¯åŠ¨å¤±è´¥çš„æœåŠ¡åˆ—è¡¨ï¼šsystemctl --failed
 
-3.ÅäÖÃfirewalld-cmd
+3.é…ç½®firewalld-cmd
 
-²é¿´°æ±¾£º firewall-cmd --version
-²é¿´°ïÖú£º firewall-cmd --help
-ÏÔÊ¾×´Ì¬£º firewall-cmd --state
-²é¿´ËùÓĞ´ò¿ªµÄ¶Ë¿Ú£º firewall-cmd --zone=public --list-ports
-¸üĞÂ·À»ğÇ½¹æÔò£º firewall-cmd --reload
-²é¿´ÇøÓòĞÅÏ¢:  firewall-cmd --get-active-zones
-²é¿´Ö¸¶¨½Ó¿ÚËùÊôÇøÓò£º firewall-cmd --get-zone-of-interface=eth0
-¾Ü¾øËùÓĞ°ü£ºfirewall-cmd --panic-on
-È¡Ïû¾Ü¾ø×´Ì¬£º firewall-cmd --panic-off
-²é¿´ÊÇ·ñ¾Ü¾ø£º firewall-cmd --query-panic
+æŸ¥çœ‹ç‰ˆæœ¬ï¼š firewall-cmd --version
+æŸ¥çœ‹å¸®åŠ©ï¼š firewall-cmd --help
+æ˜¾ç¤ºçŠ¶æ€ï¼š firewall-cmd --state
+æŸ¥çœ‹æ‰€æœ‰æ‰“å¼€çš„ç«¯å£ï¼š firewall-cmd --zone=public --list-ports
+æ›´æ–°é˜²ç«å¢™è§„åˆ™ï¼š firewall-cmd --reload
+æŸ¥çœ‹åŒºåŸŸä¿¡æ¯:  firewall-cmd --get-active-zones
+æŸ¥çœ‹æŒ‡å®šæ¥å£æ‰€å±åŒºåŸŸï¼š firewall-cmd --get-zone-of-interface=eth0
+æ‹’ç»æ‰€æœ‰åŒ…ï¼šfirewall-cmd --panic-on
+å–æ¶ˆæ‹’ç»çŠ¶æ€ï¼š firewall-cmd --panic-off
+æŸ¥çœ‹æ˜¯å¦æ‹’ç»ï¼š firewall-cmd --query-panic
  
-ÄÇÔõÃ´¿ªÆôÒ»¸ö¶Ë¿ÚÄØ
-Ìí¼Ó
-firewall-cmd --zone=public --add-port=80/tcp --permanent    £¨--permanentÓÀ¾ÃÉúĞ§£¬Ã»ÓĞ´Ë²ÎÊıÖØÆôºóÊ§Ğ§£©
-ÖØĞÂÔØÈë
+é‚£æ€ä¹ˆå¼€å¯ä¸€ä¸ªç«¯å£å‘¢
+æ·»åŠ 
+firewall-cmd --zone=public --add-port=80/tcp --permanent    ï¼ˆ--permanentæ°¸ä¹…ç”Ÿæ•ˆï¼Œæ²¡æœ‰æ­¤å‚æ•°é‡å¯åå¤±æ•ˆï¼‰
+é‡æ–°è½½å…¥
 firewall-cmd --reload
-²é¿´
+æŸ¥çœ‹
 firewall-cmd --zone=public --query-port=80/tcp
-É¾³ı
+åˆ é™¤
 firewall-cmd --zone=public --remove-port=80/tcp --permanent
